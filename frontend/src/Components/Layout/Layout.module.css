@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    height: 100vh;
+    /* tela cheia */
+}
+
+.mainContent {
+    flex: 1;
+    /* ocupa o restante do espaço */
+    padding: 16px;
+    overflow: auto;
+}
