@@ -6,10 +6,13 @@ import { theme } from './theme';
 import { Router } from './Router';
 import { DatesProvider } from '@mantine/dates';
 import 'dayjs/locale/pt-br';
+import { Notifications } from '@mantine/notifications';
+import '@mantine/notifications/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!)
     .render(
     <MantineProvider defaultColorScheme='dark' theme={theme}>
+        <Notifications position='top-center' />
         <DatesProvider settings={{ locale: 'pt-br', firstDayOfWeek: 0, weekendDays: [0] }}>
             <Router />
         </DatesProvider>

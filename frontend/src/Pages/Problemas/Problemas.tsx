@@ -1,8 +1,6 @@
 import { Skeleton, Table } from "@mantine/core";
-import { PacientesMock } from "../../Mocks/PacientesMock";
 import type { IPaciente } from "../../Interfaces/IPaciente";
 import { useEffect, useState } from "react";
-import classes from './Pacientes.module.css';
 import { useNavigate } from "react-router";
 import { ProblemasMock } from "../../Mocks/ProblemasMock";
 import type { IProblema } from "../../Interfaces/IProblemasEMetas";
@@ -14,17 +12,10 @@ export default function Problemas() {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setProblemas(ProblemasMock);
-        }, 2000);
+        }, 200);
 
         return () => clearTimeout(timeoutId);
     }, [])
-
-    function listaProblemas(paciente: IPaciente): string {
-        if (paciente.Problemas.length <= 0)
-            return "";
-
-        return paciente.Problemas.map(p => ProblemasMock.find(pm => pm.Id == p)?.Nome).join(", ");
-    }
 
     return (
         <>

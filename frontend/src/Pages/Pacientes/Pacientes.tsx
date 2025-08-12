@@ -13,7 +13,7 @@ export default function Pacientes() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setPacientes(PacientesMock);
-    }, 2000);
+    }, 200);
 
     return () => clearTimeout(timeoutId);
   }, [])

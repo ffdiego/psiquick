@@ -5,7 +5,7 @@ import Index from "./Pages/Index/Index";
 import Problemas from "./Pages/Problemas/Problemas";
 import Pacientes from "./Pages/Pacientes/Pacientes";
 import Consultas from "./Pages/Consultas/Consultas";
-import { PacienteDetails } from "./Pages/PacienteDetails/PacienteDetails";
+import { Paciente } from "./Pages/Paciente/Paciente";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/pacientes/:id',
-        element: <PacienteDetails />
+        element: <Paciente />
       },
       {
         path: '/problemas',
