@@ -15,7 +15,11 @@ export function PacienteCadastro({ paciente, setPaciente }: { paciente: IPacient
         mode: 'uncontrolled',
         validate: {
             Nome: hasLength({ min: 3 }, 'Must be at least 3 characters'),
-            Email: (value) => value ? isEmail('Invalid email')(value) : null,
+            Contatos: {
+                Email: (value) => value ? isEmail('Invalid email')(value) : null,
+                
+            }
+            
         },
     });
 

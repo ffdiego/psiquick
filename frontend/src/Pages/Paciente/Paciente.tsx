@@ -8,6 +8,7 @@ import { PacientesMock } from "../../Mocks/PacientesMock";
 import { LuFiles } from "react-icons/lu";
 import { PacienteOverview } from "./PacienteOverview/PacienteOverview";
 import { SessoesMock } from "../../Mocks/SessoesMock";
+import { PacienteArquivos } from "./PacienteArquivos/PacienteArquivos";
 
 export function Paciente() {
     const { id: idPaciente } = useParams<{ id: string }>();
@@ -53,7 +54,7 @@ export function Paciente() {
                 <p>sessoes</p>
             </Tabs.Panel>
             <Tabs.Panel value="documentos">
-                <p>documentos</p>
+                <PacienteArquivos />
             </Tabs.Panel>
         </Tabs>
     </>

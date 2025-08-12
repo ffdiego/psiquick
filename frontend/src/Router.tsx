@@ -3,8 +3,8 @@ import { Layout } from "./Components/Layout/Layout";
 
 import Index from "./Pages/Index/Index";
 import Problemas from "./Pages/Problemas/Problemas";
-import Pacientes from "./Pages/Pacientes/Pacientes";
-import Consultas from "./Pages/Consultas/Consultas";
+import ListaPacientes from "./Pages/ListaPaicentes/ListaPacientes";
+import Consultas from "./Pages/Sessoes/Sessoes";
 import { Paciente } from "./Pages/Paciente/Paciente";
 
 const router = createBrowserRouter([
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/pacientes',
-        element: <Pacientes />
+        element: <ListaPacientes />
       },
       {
         path: '/pacientes/:id',

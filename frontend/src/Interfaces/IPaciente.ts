@@ -1,9 +1,10 @@
-import type { IProblema } from "./IProblemasEMetas";
+import type { IContato } from "./IContato";
 
 export interface IPaciente {
     Id: number,
     Nome: string,
-    Email?: string,
     DataNascimento?: Date,
+    DataPrimeiraConsulta?: Date,
+    Contatos: IContato,
     Problemas: number[],
 }
