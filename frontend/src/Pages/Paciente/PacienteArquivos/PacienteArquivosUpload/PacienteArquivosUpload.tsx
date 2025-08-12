@@ -44,7 +44,7 @@ export function PacienteArquivosUpload() {
         </div>
       </Dropzone>
 
-      <Button className={classes.control} size="md" radius="xl" onClick={() => openRef.current?.()}>
+      <Button className={classes.control} size="md" radius="sm" onClick={() => openRef.current?.()}>
         Select files
       </Button>
     </div>

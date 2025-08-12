@@ -1,17 +1,10 @@
 import { LoginMock } from "../../Mocks/LoginMock";
-
-const opcoesData: Intl.DateTimeFormatOptions = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-
-}
+import { DataAgoraPorExtenso } from "../../Utils/Data";
 
 export default function Index() {
     return (
         <main>
-            <p>{(new Date()).toLocaleDateString('pt-BR', opcoesData)}</p>
+            <p>{DataAgoraPorExtenso()}</p>
             <p>Seja bem vindo <b>Dr. {LoginMock.Nome}</b>.</p>
         </main>)
 }

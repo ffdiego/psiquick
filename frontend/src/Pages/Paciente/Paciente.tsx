@@ -6,9 +6,11 @@ import type { IPaciente } from "../../Interfaces/IPaciente";
 import { useEffect, useState } from "react";
 import { PacientesMock } from "../../Mocks/PacientesMock";
 import { LuFiles } from "react-icons/lu";
+import { FaPenFancy } from "react-icons/fa";
 import { PacienteOverview } from "./PacienteOverview/PacienteOverview";
 import { SessoesMock } from "../../Mocks/SessoesMock";
 import { PacienteArquivos } from "./PacienteArquivos/PacienteArquivos";
+import { PacienteAnotacoes } from "./PacienteAnotacoes/PacienteAnotacoes";
 
 export function Paciente() {
     const { id: idPaciente } = useParams<{ id: string }>();
@@ -36,6 +38,9 @@ export function Paciente() {
                 <Tabs.Tab value="cadastro" leftSection={<MdAppRegistration size={24} />}>
                     Cadastro
                 </Tabs.Tab>
+                <Tabs.Tab value="anotacoes" leftSection={<FaPenFancy size={24} />}>
+                    Anotações
+                </Tabs.Tab>
                 <Tabs.Tab value="sessoes" leftSection={<MdPsychology size={24} />}>
                     Sessões
                 </Tabs.Tab>
@@ -49,6 +54,9 @@ export function Paciente() {
             </Tabs.Panel>
             <Tabs.Panel value="cadastro">
                 <PacienteCadastro paciente={paciente} setPaciente={setPaciente} />
+            </Tabs.Panel>
+            <Tabs.Panel value="anotacoes">
+                <PacienteAnotacoes />
             </Tabs.Panel>
             <Tabs.Panel value="sessoes">
                 <p>sessoes</p>
