@@ -1,20 +1,30 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { Layout } from "./Components/Layout/Layout";
 
-import Index from "./Pages/Index/Index";
+import Dashboard from "./Pages/Index/Dashboard";
 import Problemas from "./Pages/Problemas/Problemas";
 import ListaPacientes from "./Pages/ListaPaicentes/ListaPacientes";
 import Consultas from "./Pages/Sessoes/Sessoes";
 import { Paciente } from "./Pages/Paciente/Paciente";
+import { Login } from "./Pages/Login/Login";
+import { PrivateRoute } from "./Auth/PrivateRoute";
 
 const router = createBrowserRouter([
   {
+    path: '/login',
+    element: <Login />
+  },
+  {
     path: '/',
-    element: <Layout />,
+    element: (
+      <PrivateRoute>
+        <Layout />
+      </PrivateRoute>
+    ),
     children: [
       {
         index: true,
-        element: <Index />
+        element: <Dashboard />
       },
       {
         path: '/pacientes',

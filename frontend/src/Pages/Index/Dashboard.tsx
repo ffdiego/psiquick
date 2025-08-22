@@ -1,7 +1,7 @@
 import { LoginMock } from "../../Mocks/LoginMock";
 import { DataAgoraPorExtenso } from "../../Utils/Data";
 
-export default function Index() {
+export default function Dashboard() {
     return (
         <main>
             <p>{DataAgoraPorExtenso()}</p>
