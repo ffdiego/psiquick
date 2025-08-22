@@ -1,0 +1,6 @@
+@psiquick_HostAddress = http://localhost:5105
+
+GET {{psiquick_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
