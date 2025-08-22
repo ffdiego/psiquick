@@ -15,12 +15,12 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginRequest login)
     {
-        if (login.Username != "admin" || login.Password != "123") 
+        if (login.Usuario.Count() == 0) 
             return Unauthorized();
 
         var claims = new[]
         {
-            new Claim("Username", login.Username)
+            new Claim("Username", login.Usuario)
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Constantes.JWTKey));
@@ -35,4 +35,4 @@ public class AuthController : ControllerBase
     }
 }
 
-public record LoginRequest(string Username, string Password);
+public record LoginRequest(string Usuario, string Senha);

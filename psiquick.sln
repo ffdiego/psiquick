@@ -2,7 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "psiquick", "psiquick.csproj", "{080883E4-797B-ED08-A17E-CC7EEA06071B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSIQuick.API", "PSIQuick.API/PSIQuick.API.csproj", "{080883E4-797B-ED08-A17E-CC7EEA06071B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSIQuick.AppHost", "PSIQuick.AppHost\PSIQuick.AppHost.csproj", "{1CBB8DF9-7830-4150-93CE-88B1DDE268AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +16,10 @@ Global
 		{080883E4-797B-ED08-A17E-CC7EEA06071B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{080883E4-797B-ED08-A17E-CC7EEA06071B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{080883E4-797B-ED08-A17E-CC7EEA06071B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CBB8DF9-7830-4150-93CE-88B1DDE268AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CBB8DF9-7830-4150-93CE-88B1DDE268AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CBB8DF9-7830-4150-93CE-88B1DDE268AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CBB8DF9-7830-4150-93CE-88B1DDE268AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

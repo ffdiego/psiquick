@@ -9,5 +9,5 @@ public class Paciente
     public string? Email { get; set; }
     public string? Telefone { get; set; }
 
-    public ICollection<Doenca> Doencas { get; set; }
+    public ICollection<Doenca> Doencas { get; set; } = [];
 }

@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Code, Group } from '@mantine/core';
 import classes from './Navbar.module.css';
 import { LuCalendarClock, LuDrama, LuHouse, LuUsers } from 'react-icons/lu';
 import { Link } from 'react-router';
+import { AppHeader } from '../AppHeader/AppHeader';
+import { useAuth } from '../../Auth/AuthContext';
 
 const data = [
   { link: '/', label: 'Home', icon: LuHouse },
@@ -13,6 +14,7 @@ const data = [
 
 export function Navbar() {
   const [active, setActive] = useState('Billing');
+  const { logout } = useAuth();
 
   const links = data.map((item) => (
     <Link
@@ -33,10 +35,7 @@ export function Navbar() {
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
-        <Group className={classes.header} justify="space-between">
-          <h1>PsiQuick 🖊️</h1>
-          <Code fw={700}>v0.0.1</Code>
-        </Group>
+        <AppHeader />
         {links}
       </div>
 
@@ -45,7 +44,7 @@ export function Navbar() {
           <span>Change account</span>
         </a>
 
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
+        <a href="#" className={classes.link} onClick={logout}>
           <span>Logout</span>
         </a>
       </div>

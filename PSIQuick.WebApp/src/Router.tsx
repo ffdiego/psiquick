@@ -3,7 +3,7 @@ import { Layout } from "./Components/Layout/Layout";
 
 import Dashboard from "./Pages/Index/Dashboard";
 import Problemas from "./Pages/Problemas/Problemas";
-import ListaPacientes from "./Pages/ListaPaicentes/ListaPacientes";
+import ListaPacientes from "./Pages/ListaPacientes/ListaPacientes";
 import Consultas from "./Pages/Sessoes/Sessoes";
 import { Paciente } from "./Pages/Paciente/Paciente";
 import { Login } from "./Pages/Login/Login";

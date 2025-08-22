@@ -5,17 +5,14 @@ import { useEffect, useState } from "react";
 import classes from './Pacientes.module.css';
 import { useNavigate } from "react-router";
 import { ProblemasMock } from "../../Mocks/ProblemasMock";
+import { GetPacientes } from "../../API/PacienteService";
 
 export default function Pacientes() {
-  const [pacientes, setPacientes] = useState<IPaciente[] | null>(null);
+  const [pacientes, setPacientes] = useState<IPaciente[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setPacientes(PacientesMock);
-    }, 200);
-
-    return () => clearTimeout(timeoutId);
+    GetPacientes().then(setPacientes);
   }, [])
 
   function listaProblemas(paciente: IPaciente): string {
@@ -38,7 +35,7 @@ export default function Pacientes() {
         </Table.Thead>
         <Table.Tbody>
           {
-            pacientes?.map(paciente =>
+            pacientes.map(paciente =>
               <Table.Tr key={paciente.Id} style={{cursor: 'pointer'}} onClick={() => navigate(paciente.Id.toString(), {relative: 'path'})}>
                 <Table.Td>{paciente.Nome}</Table.Td>
                 <Table.Td>{listaProblemas(paciente)}</Table.Td>
